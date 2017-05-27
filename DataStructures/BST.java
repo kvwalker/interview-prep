@@ -147,7 +147,7 @@ public class BST {
 				if (curr.val < currParent.val) {
 					currParent.left = curr.left;
 				} else {
-\					currParent.left = curr.right;
+					currParent.left = curr.right;
 				}
 				return true;
 			} else if (curr.left != null && curr.right != null) {
@@ -182,6 +182,7 @@ public class BST {
 		test1.insert(4);
 		test1.insert(2);
 		test1.insert(11);
+		System.out.println(test1.search(2));
 		test1.insert(22);
 		for (int i = 0; i < 25; i += 3) {
 			test1.insert(i);
@@ -192,8 +193,10 @@ public class BST {
 		test1.remove(22);
 		test1.printPreOrder();
 		test1.remove(0);
+		System.out.println(test1.search(0));
 		test1.printPreOrder();
 		test1.remove(10);
+		System.out.println(test1.search(10));
 		test1.printPreOrder();
 	}
 }
